@@ -8,6 +8,9 @@
         <li>Python</li>
         <li>vue</li>
     </ul>
+    <div>
+        <button @click="showEmail"> Mostrar email</button>
+    </div>
     <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
     <p>Para acessar meu portifólio basta clicar aqui <a v-bind:href="meu_link" target="blank">Basta clicar aqui</a></p>
     <Picture />
@@ -29,6 +32,11 @@ import Picture from './Picture.vue'
                 mostrar_email: true,
                 email: 'eduardolimacrr@gmail.com',
                 meu_link: 'https://google.com'
+            }
+        },
+        methods: {
+            showEmail() {
+               console.log("Testando metodo") 
             }
         }
     }
